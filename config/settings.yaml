@@ -1,0 +1,20 @@
+model:
+  repo_id: melihuzunoglu/ppe-detection
+  filename: best.pt
+  local_path: models/best.pt
+
+inference:
+  confidence: 0.35
+  iou: 0.50
+  image_size: 640
+
+rules:
+  missing_vest_enabled: true
+  violation_cooldown_seconds: 5
+  association_margin: 0.20
+  minimum_person_confidence: 0.35
+
+output:
+  violation_dir: data/violations
+  log_csv: data/output/violations.csv
+  annotated_dir: data/output
